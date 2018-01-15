@@ -14,6 +14,8 @@ namespace Portal
             InitializeComponent();
 
             MainPage = new NavigationPage(new Views.LoginPage());
+
+            // redirects to Login Page
         }
 
         protected override void OnStart()
