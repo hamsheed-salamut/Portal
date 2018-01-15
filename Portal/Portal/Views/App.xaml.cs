@@ -13,7 +13,7 @@ namespace Portal
         {
             InitializeComponent();
 
-            MainPage = new Portal.MainPage();
+            MainPage = new NavigationPage(new Views.LoginPage());
         }
 
         protected override void OnStart()
