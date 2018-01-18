@@ -35,12 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Data\AppData.cs" />
+    <Compile Include="Data\AppName.cs" />
     <Compile Include="Data\UserData.cs" />
     <Compile Include="Interfaces\IDownloadApp.cs" />
     <Compile Include="Models\AppDetails.cs" />
     <Compile Include="Models\UserDetails.cs" />
     <Compile Include="ViewModels\GridViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\PortalViewModel.cs" />
     <Compile Include="Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>

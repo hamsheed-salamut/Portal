@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portal.Interfaces
+namespace Portal.Data
 {
-    public interface IDownloadApp
+    class AppData
     {
-        bool DownloadApplication(string uri, string fileName);
     }
 }

@@ -19,8 +19,10 @@ namespace Portal.Droid.Implementation
 {
     public class DownloadApp : IDownloadApp
     {
-        public void DownloadApplication(string uri, string fileName)
+        public bool DownloadApplication(string uri, string fileName)
         {
+            bool success = false;
+
             try
             {
                 var webClient = new WebClient();
@@ -30,6 +32,8 @@ namespace Portal.Droid.Implementation
 
                 webClient.DownloadFileCompleted += (s, e) =>
                 {
+                    success = true;
+
                     Intent promptInstall = new Intent(Intent.ActionView).SetDataAndType(Android.Net.Uri.FromFile(new Java.IO.File(Android.OS.Environment.ExternalStorageDirectory + "/download/" + fileName+".apk")), "application/vnd.android.package-archive");
                     Forms.Context.StartActivity(promptInstall);
                 };
@@ -39,6 +43,8 @@ namespace Portal.Droid.Implementation
             {
 
             }
+
+            return success;
         }
     }
 }

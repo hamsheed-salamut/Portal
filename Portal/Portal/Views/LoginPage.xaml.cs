@@ -17,6 +17,7 @@ namespace Portal.Views
         {
             InitializeComponent();
             BindingContext = new LoginViewModel();
+
         }
     }
 }

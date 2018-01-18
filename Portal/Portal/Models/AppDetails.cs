@@ -10,6 +10,7 @@ namespace Portal.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Url { get; set; }
+        public string UrlAndroid { get; set; }
+        public string UrliOs { get; set; }
     }
 }

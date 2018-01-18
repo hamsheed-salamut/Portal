@@ -19,40 +19,104 @@ namespace Portal.Data
                     Id = 1,
                     Username = "hsalamut",
                     Password = "123",
-                    Packing = false,
-                    Tracker = true,
-                    Structure = true
+                    AppModel = new List<AppDetails>
+                    {
+                       new AppDetails
+                       {
+                           Id = 1,
+                           Name = "Messenger",
+                           UrlAndroid = "http://192.168.100.7/apk/Messenger.apk",
+                           UrliOs = "This iOS URL"
+                       }, 
+                       new AppDetails
+                       {
+                           Id = 2,
+                           Name = "Pinterest",
+                           UrlAndroid = "http://192.168.100.7/apk/Pinterest.apk",
+                           UrliOs = "This iOS URL"
+                       },
+                       new AppDetails
+                       {
+                           Id = 3,
+                           Name = "Tumblr",
+                           UrlAndroid = "http://192.168.100.7/apk/Tumblr.apk",
+                           UrliOs = "This iOS URL"
+                       },
+                    }
                 },
                 new UserDetails
                 {
-                    Id = 1,
+                    Id = 2,
                     Username = "simul1",
                     Password = "123",
-                    Packing = true,
-                    Tracker = true,
-                    Structure = true
+                    AppModel = new List<AppDetails>
+                    {
+                       new AppDetails
+                       {
+                           Id = 1,
+                           Name = "Tumblr",
+                           UrlAndroid = "http://192.168.100.7/apk/Tumblr.apk",
+                           UrliOs = "This iOS URL"
+                       },
+                       new AppDetails
+                       {
+                           Id = 3,
+                           Name = "Pinterest",
+                           UrlAndroid = "http://192.168.100.7/apk/Pinterest.apk",
+                           UrliOs = "This iOS URL"
+                       }
+                    }
                 },
                 new UserDetails
                 {
                     Id = 1,
                     Username = "simul2",
                     Password = "123",
-                    Packing = false,
-                    Tracker = false,
-                    Structure = true
+                    AppModel = new List<AppDetails>
+                    {
+                       new AppDetails
+                       {
+                           Id = 2,
+                           Name = "Messenger",
+                           UrlAndroid = "http://192.168.100.7/apk/Messenger.apk",
+                           UrliOs = "This iOS URL"
+                       },
+                       new AppDetails
+                       {
+                           Id = 3,
+                           Name = "Pinterest",
+                           UrlAndroid = "http://192.168.100.7/apk/Pinterest.apk",
+                           UrliOs = "This iOS URL"
+                       },
+                    }
                 },
                 new UserDetails
                 {
                     Id = 1,
                     Username = "simul3",
                     Password = "123",
-                    Packing = true,
-                    Tracker = false,
-                    Structure = true
+                    AppModel = new List<AppDetails>
+                    {
+                       new AppDetails
+                       {
+                           Id = 1,
+                           Name = "Messenger",
+                           UrlAndroid = "http://192.168.100.7/apk/Messenger.apk",
+                           UrliOs = "This iOS URL"
+                       },
+                       new AppDetails
+                       {
+                           Id = 2,
+                           Name = "Tumblr",
+                           UrlAndroid = "http://192.168.100.7/apk/Tumblr.apk",
+                           UrliOs = "This iOS URL"
+                       },
+                    }
                 },
             };
 
             return userDetails;
         }
+
     }
 }

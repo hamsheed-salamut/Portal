@@ -14,7 +14,7 @@ using Xamarin.Forms;
 
 namespace Portal.ViewModels
 {
-    public class LoginViewModel
+    public class LoginViewModel : INotifyPropertyChanged
     {
         private IDownloadApp _downloadApp;
 
@@ -67,7 +67,8 @@ namespace Portal.ViewModels
 
             if (allUsers.Any(x => x.Username.Equals(Username) && x.Password.Equals(Password)))
             {
-                Application.Current.MainPage.Navigation.PushAsync(new PortalPage());
+                var user = allUsers.Where(x => x.Username.Equals(Username) && x.Password.Equals(Password)).First();
+                Application.Current.MainPage.Navigation.PushAsync(new PortalPage(user));
             }
             else
             {
